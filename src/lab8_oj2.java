@@ -9,20 +9,20 @@ public class lab8_oj2 {
         int n = in.nextInt();
 //        for (int z = 0; z < 10000; z++) {
 //            int n = 100;
-            arr = new int[n];
-            int sum = 0;
-            for (int i = 0; i < n; i++) {
-                arr[i] = in.nextInt();
-                sum += arr[i];
-            }
-            int bd = getMedian(0, n - 1);
-            recur(0, n - 1, bd);
+        arr = new int[n];
+        int sum = 0;
+        for (int i = 0; i < n; i++) {
+            arr[i] = in.nextInt();
+            sum += arr[i];
+        }
+        int bd = getMedian(0, n - 1);
+        recur(0, n - 1, bd);
         System.out.println((-1) + " " + (-1));
 //            for (int i = 0; i < n; i++) {
 //                System.out.print(arr[i] + " ");
 //            }
 //            System.out.println(isSorted());
-            System.out.println();
+        System.out.println();
 //        }
     }
 
@@ -45,8 +45,8 @@ public class lab8_oj2 {
         }
         int r1 = l + bound - 1;
         int l1 = l + bound;
-        int lmid = (getMedian(l, r1) + getmin(l,r1))/2;
-        int rmid = (getMedian(l1, r) + getmin(l1,r))/2;
+        int lmid = (getMedian(l, r1) + getmin(l, r1)) / 2;
+        int rmid = (getMedian(l1, r) + getmin(l1, r)) / 2;
         recur(l, r1, lmid);
         recur(l1, r, rmid);
     }
