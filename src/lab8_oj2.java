@@ -10,10 +10,8 @@ public class lab8_oj2 {
 //        for (int z = 0; z < 10000; z++) {
 //            int n = 100;
         arr = new int[n];
-        int sum = 0;
         for (int i = 0; i < n; i++) {
             arr[i] = in.nextInt();
-            sum += arr[i];
         }
         int bd = getMedian(0, n - 1);
         recur(0, n - 1, bd);
@@ -74,7 +72,7 @@ public class lab8_oj2 {
     }
 
     public static int getmin(int l, int r) {
-        int min = 100000;
+        int min = Integer.MAX_VALUE;
         for (int i = l; i <= r; i++) {
             if (arr[i] < min) {
                 min = arr[i];
